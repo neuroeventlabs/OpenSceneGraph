@@ -272,7 +272,7 @@ bool trpgReadBuffer::Get(trpgColor &color)
     return true;
 }
 
-// Get both a token and it's length, since that's fairly common
+// Get both a token and its length, since that's fairly common
 bool trpgReadBuffer::GetToken(trpgToken &tok,int32 &len)
 {
     if (!Get(tok) || !Get(len))

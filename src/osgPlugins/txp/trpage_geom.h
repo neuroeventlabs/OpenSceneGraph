@@ -2391,7 +2391,7 @@ protected:
    by having one child per tile.  If you want to support both of these then you're
    asking the reader to do a lot of thinking and you can pretty much assume that the
    one you don't test won't work.  We decided to avoid all that by coming up with a
-   generic scene graph paging scheme.  It's a little more painfull, but once you deal
+   generic scene graph paging scheme.  It's a little more painful, but once you deal
    with it you get whatever weird scheme the writer is using for free without having to
    think about it.
 

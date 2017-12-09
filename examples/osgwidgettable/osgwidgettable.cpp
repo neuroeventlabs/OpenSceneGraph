@@ -28,7 +28,7 @@ int main(int, char**)
 
     // Here we create our "cells" manually, though it will often be convenient to
     // do so algorithmically. Also, notice how we set the text name of each widget to
-    // correspond with it's "index" in the table. This is merely a convenience, which
+    // correspond with its "index" in the table. This is merely a convenience, which
     // we use later...
     table->addWidget(new osgWidget::Widget("0, 0", 100.0f, 25.0f), 0, 0);
     table->addWidget(new osgWidget::Widget("0, 1", 100.0f, 25.0f), 0, 1);

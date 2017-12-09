@@ -39,7 +39,7 @@ void UpdateBone::operator()(osg::Node* node, osg::NodeVisitor* nv)
             return;
         }
 
-        // here we would prefer to have a flag inside transform stack in order to avoid update and a dirty state in matrixTransform if it's not require.
+        // here we would prefer to have a flag inside transform stack in order to avoid update and a dirty state in matrixTransform if it's not required.
         _transforms.update();
         const osg::Matrix& matrix = _transforms.getMatrix();
         b->setMatrix(matrix);

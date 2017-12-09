@@ -1,13 +1,13 @@
 /* -*-c++-*- OpenThreads library, Copyright (C) 2002 - 2007  The Open Thread Group
  *
- * This library is open source and may be redistributed and/or modified under  
- * the terms of the OpenSceneGraph Public License (OSGPL) version 0.0 or 
+ * This library is open source and may be redistributed and/or modified under
+ * the terms of the OpenSceneGraph Public License (OSGPL) version 0.0 or
  * (at your option) any later version.  The full license is in LICENSE file
  * included with this distribution, and on the openscenegraph.org website.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * OpenSceneGraph Public License for more details.
 */
 
@@ -15,7 +15,7 @@
 //
 // Win32Mutex.c++ - C++ Mutex class .
 // The idea for it is borrowed from SGI STL
-// It looks like it's hard to use win32 CRITICALL_SECTIONS withour introducing race 
+// It looks like it's hard to use win32 CRITICALL_SECTIONS withour introducing race
 // conditions on InitializeCriticalSection() . So we use spin mutex here.
 // ~~~~~~~~~~~~~~~~
 //
@@ -125,7 +125,7 @@ int Mutex::lock() {
 
     unsigned my_spin_max = WIN32MutexSpin<0>::__max;
     unsigned my_last_spins = WIN32MutexSpin<0>::__last;
-    volatile unsigned junk = 17;      
+    volatile unsigned junk = 17;
     unsigned i;
 
     for (i = 0; i < my_spin_max; i++) {

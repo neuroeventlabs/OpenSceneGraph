@@ -357,7 +357,7 @@ int main(int argc, char** argv)
         // no Terrain node present insert one above the loaded model.
         terrain = new osgTerrain::Terrain;
 
-        // if CoordinateSystemNode is present copy it's contents into the Terrain, and discard it.
+        // if CoordinateSystemNode is present copy its contents into the Terrain, and discard it.
         osg::CoordinateSystemNode* csn = findTopMostNodeOfType<osg::CoordinateSystemNode>(rootnode.get());
         if (csn)
         {

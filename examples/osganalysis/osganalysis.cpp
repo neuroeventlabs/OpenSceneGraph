@@ -806,7 +806,7 @@ int main(int argc, char** argv)
 
             viewer.home();
 
-            // we no longer need the paging operation as it's done it's job.
+            // we no longer need the paging operation as it's done its job.
             databasePagingOperation = 0;
 
             viewer.home();

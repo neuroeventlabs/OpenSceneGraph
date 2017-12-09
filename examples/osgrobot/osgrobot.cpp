@@ -16,15 +16,15 @@
 *  THE SOFTWARE.
 */
 
-/* 
+/*
     The code below is to show how a hierarchy of objects can be made within a scenegraph.
     In other words, how there can be a parent/child relationship between objects such
-    that when a parent is rotated or translated, the children move is respect to it's
+    that when a parent is rotated or translated, the children move is respect to its
     parent movement.  A robotic arm is used in this example because this is what I'm
     using OSG for.
- 
+
     To rotate the joints use the following table to rotate each respective joint.
- 
+
     joint    key        rotation
     1        q        + 1 degree
     1        a        - 1 degree
@@ -38,7 +38,7 @@
     5        g        - 1 degree
     6        y        + 1 degree
     6        h        - 1 degree
-  
+
     In many robotics projects, the x and z axis are only used to define the positions
     of the joints of a robotic arm.  By not using the y-axis, the mathematics of
     inverse kinematics becomes easier (and in some cases possible).  All joint rotations
@@ -46,7 +46,7 @@
     x (color red), y (color green), and z (color blue) axis will display.  Using the
     thumb of the right hand to point in the same direction of the z-axis, use the right
     hand rule to define a positive angle of rotation.
- 
+
     The robotic arm in general follows the algorithm
     rotate about the x axis, translate along the x-axis, translate along the z axis,
     and then rotate about the z-axis. There is 1 exception in the method buildJoint3(...)
@@ -56,7 +56,7 @@
     the cheat.  To learn moue about positioning joints using only the x and z axis,
     web search 'Denavit-Hartenberg'.  wikipedia has comments at the URL...
     http://en.wikipedia.org/wiki/Robotics_conventions#Denavit-Hartenberg_link_frame_convention_.28DH.29
- 
+
     Lessons learned with osg...
     When starting this work I was very new to OSG.  When I first placed a cylinder
     in a scene and rotated the cylinder about the z and x axis, I noticed that the rotation
@@ -68,14 +68,14 @@
     -- believing the offset -height/2 would place the axis of rotation at the start of
     the tube.  I was certainly wrong about this and found out the equation needs to
     be height/2.
- 
+
     ...
     example 1
     joint->addDrawable(new osg::ShapeDrawable(new osg::Capsule(osg::Vec3(0.0f,0.0f,height/2),radius,height),hints));
     ...
-    
- 
- 
+
+
+
     author: James Moliere
     date written: 10/12/2008
 */
@@ -151,40 +151,40 @@ public:
                 switch (ea.getKey())
                 {
                 case 'q':
-                    rotate(osg::PI/180, joint1); 
+                    rotate(osg::PI/180, joint1);
                     return true;
                 case 'a':
-                    rotate(-osg::PI/180, joint1); 
+                    rotate(-osg::PI/180, joint1);
                     return true;
                 case 'w':
-                    rotate(osg::PI/180, joint2); 
+                    rotate(osg::PI/180, joint2);
                     return true;
                 case 's':
-                    rotate(-osg::PI/180, joint2); 
+                    rotate(-osg::PI/180, joint2);
                     return true;
                 case 'e':
-                    rotate(osg::PI/180, joint3); 
+                    rotate(osg::PI/180, joint3);
                     return true;
                 case 'd':
-                    rotate(-osg::PI/180, joint3); 
+                    rotate(-osg::PI/180, joint3);
                     return true;
                 case 'r':
-                    rotate(osg::PI/180, joint4); 
+                    rotate(osg::PI/180, joint4);
                     return true;
                 case 'f':
-                    rotate(-osg::PI/180, joint4); 
+                    rotate(-osg::PI/180, joint4);
                     return true;
                 case 't':
-                    rotate(osg::PI/180, joint5); 
+                    rotate(osg::PI/180, joint5);
                     return true;
                 case 'g':
-                    rotate(-osg::PI/180, joint5); 
+                    rotate(-osg::PI/180, joint5);
                     return true;
                 case 'y':
-                    rotate(osg::PI/180, joint6); 
+                    rotate(osg::PI/180, joint6);
                     return true;
                 case 'h':
-                    rotate(-osg::PI/180, joint6); 
+                    rotate(-osg::PI/180, joint6);
                     return true;
                 }
             }
@@ -296,7 +296,7 @@ osg::MatrixTransform* buildJoint3(osg::MatrixTransform* previousJoint)
     osg::Matrix zTransCheat = osg::Matrix::translate(0.0,0.0,-height);
     zCheat->setMatrix(zTransCheat);
     xTransform->addChild(zCheat);
-    
+
     osg::ShapeDrawable *shape = new osg::ShapeDrawable(new osg::Capsule(osg::Vec3(0.0f,0.0f,height/2),radius,height),hints);
     joint->addDrawable(shape);
     zCheat->addChild(joint);

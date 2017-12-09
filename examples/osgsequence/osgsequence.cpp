@@ -243,7 +243,7 @@ int main( int argc, char **argv )
         "- can be used for simple flip-book-style animation",
         "- is subclassed from osg::Switch",
         "- assigns a display duration to each child",
-        "- can loop or swing through an interval of it's children",
+        "- can loop or swing through an interval of its children",
         "- can repeat the interval a number of times or indefinitively",
         "- press 's' to start/pause/resume",
         "- press 'l' to toggle loop/swing mode",

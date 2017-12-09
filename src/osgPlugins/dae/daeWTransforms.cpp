@@ -187,7 +187,7 @@ void daeWriter::apply( osg::Transform &node )
     updateCurrentDaeNode();
     currentNode = daeSafeCast< domNode >(currentNode->add( COLLADA_ELEMENT_NODE ) );
 
-    // If a DOFTransform node store it's data as extra "DOFTransform" data in the "OpenSceneGraph" technique
+    // If a DOFTransform node store its data as extra "DOFTransform" data in the "OpenSceneGraph" technique
     osgSim::DOFTransform* dof = dynamic_cast<osgSim::DOFTransform*>(&node);
     if (_pluginOptions.writeExtras && dof)
     {

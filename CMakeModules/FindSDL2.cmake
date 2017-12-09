@@ -111,7 +111,7 @@ if(NOT APPLE)
 endif()
 
 # MinGW needs an additional library, mwindows
-# It's total link flags should look like -lmingw32 -lSDLmain -lSDL -lmwindows
+# Its total link flags should look like -lmingw32 -lSDLmain -lSDL -lmwindows
 # (Actually on second look, I think it only needs one of the m* libraries.)
 if(MINGW)
   set(MINGW32_LIBRARY mingw32 CACHE STRING "mwindows for MinGW")

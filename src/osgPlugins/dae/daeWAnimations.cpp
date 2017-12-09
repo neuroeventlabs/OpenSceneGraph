@@ -71,7 +71,7 @@ void daeWriter::writeAnimations( osg::Node &wnode )
                     std::string channelName( channel->getName() );
                     std::string channelNameUTF( _pluginOptions.namesUseCodepage ? osgDB::convertStringFromCurrentCodePageToUTF8(channelName) : channelName );
 
-                    // Wrap each animation channel into it's own child <animation> when more than 1 channel
+                    // Wrap each animation channel into its own child <animation> when more than 1 channel
                     if (animationChannels.size() > 1)
                     {
                         pDomAnimation = daeSafeCast< domAnimation >( pMainDomAnimation->add( COLLADA_ELEMENT_ANIMATION ) );

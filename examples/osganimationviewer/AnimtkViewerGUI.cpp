@@ -221,7 +221,7 @@ AnimtkViewerGUI::AnimtkViewerGUI(osgViewer::View* view, float w, float h, unsign
 
     // Remember, you can't call resizePercent until AFTER the box is parented
     // by a WindowManager; how could it possibly resize itself if it doesn't know
-    // how large it's viewable area is?
+    // how large is its viewable area?
     _buttonBox->resizePercent(100.0f);
     _buttonBox->resizeAdd(0.0f, 10.0f);
 }

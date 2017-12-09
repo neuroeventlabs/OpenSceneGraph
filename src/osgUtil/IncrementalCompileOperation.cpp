@@ -604,7 +604,7 @@ void IncrementalCompileOperation::remove(CompileSet* compileSet)
 
     if (!compileSet) return;
 
-    // remove CompileSet from _toCompile list if it's present.
+    // remove CompileSet from _toCompile list if its present.
     {
         OpenThreads::ScopedLock<OpenThreads::Mutex>  lock(_toCompileMutex);
         for(CompileSets::iterator itr = _toCompile.begin();
@@ -619,7 +619,7 @@ void IncrementalCompileOperation::remove(CompileSet* compileSet)
         }
     }
 
-    // remove CompileSet from _compiled list if it's present.
+    // remove CompileSet from _compiled list if its present.
     {
         OpenThreads::ScopedLock<OpenThreads::Mutex>  lock(_compiledMutex);
         for(CompileSets::iterator itr = _compiled.begin();

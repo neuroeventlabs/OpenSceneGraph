@@ -41,7 +41,7 @@ void ScriptNodeCallback::operator()(Node* node, NodeVisitor* nv)
     if (engine && _script.valid())
     {
         // To handle the case where a NodeVisitor is created on the stack and can't be automatically ref counted
-        // we take a reference to prevent the inputParameters reference to the NodeVisitor making it's ref count going to zero and causing a delete.
+        // we take a reference to prevent the inputParameters reference to the NodeVisitor making its ref count going to zero and causing a delete.
         ref_ptr<NodeVisitor> ref_nv(nv);
 
         {

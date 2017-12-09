@@ -155,8 +155,8 @@ bool getCylinderLineIntersection(const osg::Cylinder& cylinder,
                                  const osg::Vec3d& lineStart, const osg::Vec3d& lineEnd,
                                  osg::Vec3d& isectFront, osg::Vec3d& isectBack)
 {
-    // Compute matrix transformation that takes the cylinder to a unit cylinder with Z-axis as it's axis and
-    // (0,0,0) as it's center.
+    // Compute matrix transformation that takes the cylinder to a unit cylinder with Z-axis as its axis and
+    // (0,0,0) as its center.
     double oneOverRadius = 1.0f / cylinder.getRadius();
     osg::Matrix toUnitCylInZ = osg::Matrix::translate(-cylinder.getCenter())
                                * osg::Matrix::scale(oneOverRadius, oneOverRadius, oneOverRadius)

@@ -65,7 +65,7 @@ struct ReleaseBlockOnCompileCompleted : public osgUtil::IncrementalCompileOperat
     {
         if (_block.valid()) _block->completed();
 
-        // tell IncrementalCompileOperation that it's now safe to remove the compileSet
+        // tell IncrementalCompileOperation that its now safe to remove the compileSet
 
         osg::notify(osg::NOTICE)<<"compileCompleted("<<compileSet<<")"<<std::endl;
 

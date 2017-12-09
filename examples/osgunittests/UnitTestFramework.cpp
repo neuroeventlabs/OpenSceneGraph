@@ -103,7 +103,7 @@ TestSuite* TestGraph::suite(const std::string& path, TestSuite* tsuite, bool cre
     std::string::const_iterator it1 = path.begin();
     std::string::const_iterator it2 = it1;
 
-    // Dissect the path into it's constituent components
+    // Dissect the path into its constituent components
     do{
 
         while( it2 != path.end() && *it2 != '.' ) ++it2;
@@ -141,7 +141,7 @@ TestSuite* TestGraph::suite(
 
     if(child){
 
-        // We've found a child with the right name. But is it a 
+        // We've found a child with the right name. But is it a
         // test suite?
 
         if(TestSuite* childSuite = dynamic_cast<TestSuite*>(child)){
@@ -177,7 +177,7 @@ TestGraph::TestGraph(): root_(new TestSuite("root"))
 bool TestQualifier::visitEnter( TestSuite* pSuite )
 {
     _path.append( pSuite->name() );
-    _path += SEPCHAR; 
+    _path += SEPCHAR;
     return true;
 }
 

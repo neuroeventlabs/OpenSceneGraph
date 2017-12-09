@@ -8,7 +8,7 @@
 #include <osgWidget/Box>
 #include <osgWidget/Label>
 
-// For now this is just an example, but osgWidget::Menu will later be it's own Window.
+// For now this is just an example, but osgWidget::Menu will later be its own Window.
 // I just wanted to get this out there so that people could see it was possible.
 
 const unsigned int MASK_2D = 0xF0000000;

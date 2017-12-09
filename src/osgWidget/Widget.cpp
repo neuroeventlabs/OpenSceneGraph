@@ -113,7 +113,7 @@ void Widget::setDimensions(point_type x, point_type y, point_type w, point_type 
     if(w != -1.0f && w < _minWidth) {
         warn()
             << "Widget [" << _name
-            << "] was asked to set it's width to " << w
+            << "] was asked to set its width to " << w
             << ", but the minimum width is " << _minWidth
             << "." << std::endl
         ;
@@ -124,7 +124,7 @@ void Widget::setDimensions(point_type x, point_type y, point_type w, point_type 
     if(h != -1.0f && h < _minHeight) {
         warn()
             << "Widget [" << _name
-            << "] was asked to set it's height to " << h
+            << "] was asked to set its height to " << h
             << ", but the minimum height is " << _minHeight
             << "." << std::endl
         ;
@@ -333,7 +333,7 @@ bool Widget::setImage(const std::string& filePath, bool setTexCoords, bool useTe
         warn()
             << "Widget [" << _name
             << "] cannot find file " << filePath
-            << " to set as it's Image." << std::endl
+            << " to set as its Image." << std::endl
         ;
 
         return false;

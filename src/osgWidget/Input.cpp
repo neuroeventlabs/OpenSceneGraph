@@ -84,7 +84,7 @@ Input::Input(const std::string& name, const std::string& label, unsigned int siz
 
 void Input::_calculateSize(const XYCoord& /*size*/)
     {
-   // An Input cannot currently set it's own size RELIABLY until the osgText implementation
+   // An Input cannot currently set its own size RELIABLY until the osgText implementation
    // is dratiscally improved. I'm getting wildly crazy results. :(
    // point_type height = size.y() > _cursor->getHeight() ? size.y() : _cursor->getHeight();
 

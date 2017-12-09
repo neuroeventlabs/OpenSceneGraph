@@ -582,7 +582,7 @@ osg::Node* daeReader::processNode( domNode *node, bool skeleton)
     }
     else
     {
-        // No transform data, determine node type based on it's available extra data
+        // No transform data, determine node type based on its available extra data
         resultNode = processExtras(node);
     }
 

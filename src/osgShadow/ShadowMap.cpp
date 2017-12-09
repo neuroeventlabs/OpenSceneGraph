@@ -424,7 +424,7 @@ void ShadowMap::cull(osgUtil::CullVisitor& cv)
     if (selectLight)
     {
 
-        // set to ambient on light to black so that the ambient bias uniform can take it's affect
+        // set to ambient on light to black so that the ambient bias uniform can take its effect
         const_cast<osg::Light*>(selectLight)->setAmbient(osg::Vec4(0.0f,0.0f,0.0f,1.0f));
 
         //std::cout<<"----- VxOSG::ShadowMap selectLight spot cutoff "<<selectLight->getSpotCutoff()<<std::endl;

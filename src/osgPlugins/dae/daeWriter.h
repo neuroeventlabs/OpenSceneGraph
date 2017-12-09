@@ -80,7 +80,7 @@ using namespace ColladaDOM141;
 
 namespace osgDAE {
 
-/// Convert value to string using it's stream operator
+/// Convert value to string using its stream operator
 template <typename T>
 std::string toString(T value)
 {

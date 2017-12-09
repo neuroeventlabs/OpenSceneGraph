@@ -263,7 +263,7 @@ osg::Node* addDraggerToScene(osg::Node* scene, const std::string& name, bool fix
         dragger->addTransformUpdating(transform);
     }
 
-    // we want the dragger to handle it's own events automatically
+    // we want the dragger to handle its own events automatically
     dragger->setHandleEvents(true);
 
     // if we don't set an activation key or mod mask then any mouse click on

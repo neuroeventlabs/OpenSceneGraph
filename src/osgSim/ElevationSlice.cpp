@@ -1057,7 +1057,7 @@ struct LineConstructor
                 classification = ((itr != _segments.end()) && (nextItr != _segments.end())) ?  itr->compare(*nextItr) : Segment::UNCLASSIFIED;
             }
 
-            // increment iterator it it's not already at end of container.
+            // increment iterator if it's not already at end of container.
             if (itr!=_segments.end()) ++itr;
         }
     }

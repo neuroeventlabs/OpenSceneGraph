@@ -801,7 +801,7 @@ void ViewDependentShadowMap::cull(osgUtil::CullVisitor& cv)
 
     Frustum frustum(&cv, minZNear, maxZFar);
 
-    // return compute near far mode back to it's original settings
+    // return compute near far mode back to its original settings
     cv.setComputeNearFarMode(cachedNearFarMode);
 
     OSG_INFO<<"frustum.eye="<<frustum.eye<<", frustum.centerNearPlane, "<<frustum.centerNearPlane<<" distance = "<<(frustum.eye-frustum.centerNearPlane).length()<<std::endl;

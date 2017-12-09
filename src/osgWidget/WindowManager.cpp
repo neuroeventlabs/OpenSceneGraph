@@ -392,7 +392,7 @@ bool WindowManager::setFocused(Window* window) {
     std::sort(focusable.begin(), focusable.end(), WindowZCompare());
 
     // This is the depth range for each Window. Each Window object must be informed of
-    // the Z space allocated to it so that it can properly arrange it's children. We
+    // the Z space allocated to it so that it can properly arrange its children. We
     // add 2 additional Windows here for anything that should appear in the background
     // and foreground areas.
     matrix_type zRange = 1.0f / (focusable.size() + 2.0f);

@@ -105,7 +105,7 @@ bool findInputSourceBySemantic( TInputArray& inputs, const char* semantic, daeEl
     return false;
 }
 
-/// Convert string to value using it's stream operator
+/// Convert string to value using its stream operator
 template <typename T>
 T parseString(const std::string& valueAsString) {
     std::stringstream str;

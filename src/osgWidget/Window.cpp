@@ -369,7 +369,7 @@ void Window::update() {
         _scissor()->setScissor(sx, sy, sw, sh);
     }
 
-    // Update the Window itself, setting it's matrix according to translate, rotate, and
+    // Update the Window itself, setting its matrix according to translate, rotate, and
     // scale values.
     osg::Matrix r = osg::Matrix::rotate(
         osg::DegreesToRadians(_r),
@@ -392,7 +392,7 @@ void Window::_setWidthAndHeightUnknownSizeError(const std::string& size, point_t
 void Window::_setWidthAndHeightNotPAError(const std::string& size, point_type val) {
     warn()
         << "Window [" << _name
-        << "] should be pixel-aligned, but a remainder was detected for it's "
+        << "] should be pixel-aligned, but a remainder was detected for its "
         << size << " (" << val << ")." << std::endl
     ;
 }
@@ -689,7 +689,7 @@ bool Window::setFocused(const Widget* widget) {
         warn()
             << "Window [" << _name
             << "] couldn't find the Widget [" << widget->getName()
-            << "] in it's object list." << std::endl
+            << "] in its object list." << std::endl
         ;
 
         return false;
@@ -729,7 +729,7 @@ bool Window::setFocused(const std::string& name) {
         warn()
             << "Window [" << _name
             << "] couldn't find a Widget named [" << name
-            << "] to set as it's focus." << std::endl
+            << "] to set as its focus." << std::endl
         ;
 
         return false;

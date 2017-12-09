@@ -70,7 +70,7 @@ unsigned int ShaderAttribute::addUniform(Uniform* uniform)
         if (_uniforms[i] == uniform) return i;
     }
 
-    // add uniform and return it's position
+    // add uniform and return its position
     _uniforms.push_back(uniform);
     return _uniforms.size()-1;
 }
